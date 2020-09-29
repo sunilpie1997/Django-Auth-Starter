@@ -17,6 +17,8 @@
     ->  create google OAuth credentials from developer console 
         https://console.developers.google.com/apis/credentials?project=enduring-plate-283318
 
+        REDIRECT URI SHOULD BE: 'http://localhost:8000/oauth/complete/google-oauth2/
+
     ->  add Google key and secret created from above process in 'google_conf.py' file
 
     ->  execute:
