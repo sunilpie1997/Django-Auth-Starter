@@ -1,5 +1,7 @@
     ### Django Auth Starter ###
 
+    Credits:https://simpleisbetterthancomplex.com/tutorial/2016/10/24/how-to-add-social-login-to-django.html
+    
     ->  This is a django project with full featured accounts app that 
         can be used as template for your next django project.
 
