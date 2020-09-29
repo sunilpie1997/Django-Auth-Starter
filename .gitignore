@@ -1,0 +1,11 @@
+
+
+
+jwt-key
+account/__pycache__
+account/migrations/__pycache__
+django_auth_server/__pycache__
+django_auth_server/settings/__pycache__
+
+account/migrations/0001_initial.py
+notes.txt

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+    {% if form.errors %}
+        <p class="text-danger">Your username and password didn't match. Please try again.</p>
+    {% endif %}
+
+
+    {% if user.is_authenticated %}
+  
+
+    {% else %}
+
+        <form method="post" action="{% url 'login' %}" class="form-class">
+            {% csrf_token %}
+            <table class="table table-borderless navlink">
+            <tbody>
+
+            <tr>
+            <th scope="row">Username</th>
+            <td>{{ form.username }}</td>
+            </tr>
+            <tr>
+            <th scope="row">Password</th>
+            <td>{{ form.password }}</td>
+            </tr>
+
+        </tbody>
+        </table>
+    
+            <button class="btn custom-btn" type="submit">Sign In</button>
+            <input type="hidden" name="next" value="{{ next }}">
+        </form>
+   
+    
+
+        <a class="navlink" href="{% url 'social:begin' 'google-oauth2' %}">SignIn with Google</a><br>
+
+
+    {% endif %}
+
+{% endblock %}
+

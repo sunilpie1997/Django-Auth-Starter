@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+ 
+
+    <h3 class="navlink">Welcome !!!</h3>
+
+    <ul class="navlink">
+        <li>If this is your first time, please change your password</li>
+        <li>Otherwise, you won't be able to login unless you repeat the same process :))</li>
+    </ul>
+    <hr>
+
+
+    <table class="table-borderless navlink table">
+
+        <tbody>
+            <tr>
+            <th>Username</th>
+            <td>{{user.username}}</td>
+            </tr>
+            <tr>
+            <th>Email</th>
+            <td>{{user.email}}</td>
+            </tr>
+            <tr>
+            <th>First name</th>
+            <td>{{user.first_name}}</td>
+            </tr>
+            <tr>
+            <th>Last name</th>
+            <td>{{user.last_name}}</td>
+            </tr>
+            <tr>
+            <th>Admin</th>
+            <td>{{user.is_staff}}</td>
+            </tr>
+            
+           
+
+        </tbody>
+
+    </table>
+
+    <a href="{% url 'password_change' %}"><button class="btn custom-btn" >Change Password</button></a>
+
+{% else %}
+    <h3 class="navlink">Login First</h3>
+
+{% endif %}
+
+{% endblock %}
